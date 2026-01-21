@@ -31,7 +31,7 @@ const envChecker = (): IEnv => {
 
     requiredEnv.forEach((key) => {
         if (!process.env[key]) {
-            throw new Error(`Required env messing : ${key}`);
+            throw new Error(`Required env missing : ${key}`);
         }
     });
 
