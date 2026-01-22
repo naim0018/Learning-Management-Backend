@@ -10,7 +10,7 @@ const envChecker = () => {
     const requiredEnv = ["MONGO_URI", "PORT", "DEV_ENVIRONMENT", "ACCESS_SECRATE", "REFRESH_SECRATE", "CLOUDINARY_API_SECRATE", "CLOUDINARY_CLOUD_NAME", "CLOUDINARY_API_KEY", "ADMIN_EMAIL", "ADMIN_PASSWORD", "ADMIN_NAME", "SMTP_HOST", "SMTP_PORT", "SMTP_PASS", "SMTP_USER"];
     requiredEnv.forEach((key) => {
         if (!process.env[key]) {
-            throw new Error(`Required env messing : ${key}`);
+            throw new Error(`Required env missing : ${key}`);
         }
     });
     return {

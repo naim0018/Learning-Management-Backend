@@ -30,6 +30,11 @@
     "passport-azure-ad": "^4.3.5",
     "zod": "^3.22.2"
   },
+  "overrides": {
+    "multer-storage-cloudinary": {
+      "cloudinary": "$cloudinary"
+    }
+  },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/cookie-parser": "^1.4.9",
