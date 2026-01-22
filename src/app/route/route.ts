@@ -9,49 +9,46 @@ import badgesRouter from "../module/BadgesAchievements/badges.router";
 import supportRouter from "../module/Support/support.router";
 import RecentActivityRouter from "../module/RecentActivity/recent.avtivity.router";
 
-
-
 export const moduleRoute = [
-    {
-        path: "/user",
-        routes: UserRouter
-    },
-    {
-        path: "/course",
-        routes: CourseRouter
-    },
+  {
+    path: "/user",
+    routes: UserRouter,
+  },
+  {
+    path: "/course",
+    routes: CourseRouter,
+  },
 
-    {
-        path: "/module",
-        routes: CourseModuleRouter
-    },
-    {
-        path: "/lession",
-        routes: LessionRouter
-    },
-    {
-        path: "/progress",
-        routes: userCourseProgressRouter
-    },
-    {
-        path: "/enrolCourse",
-        routes: enrollRouter
-    },
-    {
-        path: "/analytics",
-        routes: analyticsRouter
-    },
-    {
-        path: "/badges",
-        routes: badgesRouter
-    },
-    {
-        path: "/support",
-        routes: supportRouter
-    },
-    {
-        path: "/recent",
-        routes: RecentActivityRouter
-    },
+  {
+    path: "/module",
+    routes: CourseModuleRouter,
+  },
+  {
+    path: "/lession",
+    routes: LessionRouter,
+  },
+  {
+    path: "/progress",
+    routes: userCourseProgressRouter,
+  },
+  {
+    path: "/enrolCourse",
+    routes: enrollRouter,
+  },
+  {
+    path: "/analytics",
+    routes: analyticsRouter,
+  },
+  {
+    path: "/badges",
+    routes: badgesRouter,
+  },
+  {
+    path: "/support",
+    routes: supportRouter,
+  },
+  {
+    path: "/recent",
+    routes: RecentActivityRouter,
+  },
 ];
-
