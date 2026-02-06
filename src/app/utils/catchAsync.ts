@@ -7,5 +7,4 @@ const catchAsync = (fn: asyncHandler) => (req: Request, res: Response, next: Nex
         next(error)
     })
 }
-
 export default catchAsync
