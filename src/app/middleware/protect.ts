@@ -11,7 +11,7 @@ export const checkAuths = (...auths: string[]) => async (req: Request, res: Resp
     const token = req.headers?.authorization;
 
     if (!token) {
-        throw new AppError(400, "User not authorized!");
+        throw new AppError(401, "User not authorized!");
     };
 
     const validationUser = jwt.verify(token, envVers.ACCESS_SECRATE) as JwtPayload;
