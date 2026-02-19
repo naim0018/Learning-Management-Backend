@@ -15,7 +15,7 @@ exports.app.use((0, cors_1.default)({
     origin: [
         "http://localhost:5173",
         "http://localhost:5174",
-        "https://travisjerovetz-frontend.vercel.app",
+        "",
         "*",
     ],
     credentials: true,
@@ -29,7 +29,7 @@ route_1.moduleRoute.forEach((item) => exports.app.use(`/api/v1${item.path}`, ite
 exports.app.get("/", (req, res) => {
     res.status(200).json({
         success: true,
-        message: "Server runing success",
+        message: "Server running successfully",
     });
 });
 exports.app.use(global_error_handler_1.globalErrorhandler);

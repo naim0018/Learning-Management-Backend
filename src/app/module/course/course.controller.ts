@@ -12,7 +12,6 @@ import { RecentActivity } from "../RecentActivity/recent.activity.model";
 
 
 const createCourse = catchAsync(async (req, res, next: NextFunction) => {
-
     const bodyData = req.body.data ? JSON.parse(req.body.data) : {};
     const files = req.files as {
         thumbnail?: Express.Multer.File[];

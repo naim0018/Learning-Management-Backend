@@ -45,24 +45,28 @@ process.on("SIGINT", () => {
     ;
     process.exit(0);
 });
-process.on("uncaughtException", () => {
+process.on("uncaughtException", (error) => {
     console.log("UncaughtException detected... Server shuting doen.");
+    console.error(error);
     if (server) {
         server.close(() => {
-            process.exit(0);
+            process.exit(1);
         });
     }
-    ;
-    process.exit(0);
+    else {
+        process.exit(1);
+    }
 });
-process.on("unhandledRejection", () => {
+process.on("unhandledRejection", (reason, promise) => {
     console.log("UnhandledRejection detected... Server shuting doen.");
+    console.error("Reason:", reason);
     if (server) {
         server.close(() => {
-            process.exit(0);
+            process.exit(1);
         });
     }
-    ;
-    process.exit(0);
+    else {
+        process.exit(1);
+    }
 });
 //# sourceMappingURL=server.js.map
