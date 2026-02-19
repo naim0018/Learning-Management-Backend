@@ -14,7 +14,6 @@ import { RecentActivity } from "../RecentActivity/recent.activity.model";
 const createCourse = catchAsync(async (req, res, next: NextFunction) => {
 
     const bodyData = req.body.data ? JSON.parse(req.body.data) : {};
-
     const files = req.files as {
         thumbnail?: Express.Multer.File[];
         instructorProfile?: Express.Multer.File[];
@@ -30,8 +29,8 @@ const createCourse = catchAsync(async (req, res, next: NextFunction) => {
 
 
     await RecentActivity.create({
-        title: "Lounched New Course",
-        description: `${result.title} Lounched the platform`
+        title: "Launched New Course",
+        description: `${result.title} Launched the platform`
     })
 
     sendResponse(res, {
