@@ -12,7 +12,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "https://travisjerovetz-frontend.vercel.app",
+      "",
       "*",
     ],
     credentials: true,
@@ -30,7 +30,7 @@ moduleRoute.forEach((item) => app.use(`/api/v1${item.path}`, item.routes));
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
-    message: "Server runing success",
+    message: "Server running successfully",
   });
 });
 

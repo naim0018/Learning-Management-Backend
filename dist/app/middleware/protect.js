@@ -11,7 +11,7 @@ const env_1 = require("../config/env");
 const checkAuths = (...auths) => async (req, res, next) => {
     const token = req.headers?.authorization;
     if (!token) {
-        throw new AppError_1.default(400, "User not authorized!");
+        throw new AppError_1.default(401, "User not authorized!");
     }
     ;
     const validationUser = jsonwebtoken_1.default.verify(token, env_1.envVers.ACCESS_SECRATE);
